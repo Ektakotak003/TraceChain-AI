@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TraceChain:AI — Blockchain Investigation</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="topbar">
+    <div class="brand">
+        <span class="brand-mark">TC</span>
+        <div>
+            <h2>TraceChain:AI</h2>
+            <small>Blockchain Investigation</small>
+        </div>
+    </div>
+
+    <div class="status">
+        <span class="dot"></span>
+        Bitcoin Network
+    </div>
+</header>
+
+
+<main class="container">
+
+    <section class="hero">
+    <div class="search-box">
+        <input 
+            id="walletInput" 
+            type="text" 
+            placeholder="Enter Bitcoin wallet address" 
+            autocomplete="off"
+        >
+        <button id="trackBtn">Start Investigation</button>
+    </div>
+    
+    <p id="statusText" class="status-text">
+        Ready for investigation
+    </p>
+</section>
+
+
+    <section id="results" class="results hidden">
+
+        <div class="section-heading">
+            <div>
+                <p class="eyebrow">INVESTIGATION RESULT</p>
+                <h2>Wallet overview</h2>
+            </div>
+
+            <span id="networkBadge" class="badge">BITCOIN</span>
+        </div>
+
+
+        <div class="wallet-card">
+            <span>Investigated wallet</span>
+            <strong id="walletAddress">—</strong>
+        </div>
+
+
+        <div class="stats-grid">
+
+            <div class="stat-card">
+                <span>Confirmed Transactions</span>
+                <strong id="txCount">—</strong>
+            </div>
+
+            <div class="stat-card">
+                <span>Total Received</span>
+                <strong id="received">—</strong>
+                <small>BTC</small>
+            </div>
+
+            <div class="stat-card">
+                <span>Total Sent</span>
+                <strong id="sent">—</strong>
+                <small>BTC</small>
+            </div>
+
+            <div class="stat-card">
+                <span>Current Balance</span>
+                <strong id="balance">—</strong>
+                <small>BTC</small>
+            </div>
+
+        </div>
+
+
+        <div class="analysis-grid">
+
+            <div class="panel">
+                <div class="panel-title">
+                    <h3>Risk indicators</h3>
+                    <span id="riskLevel" class="risk">ANALYZING</span>
+                </div>
+
+                <div id="riskList" class="risk-list">
+                    <p>Investigation data will appear here.</p>
+                </div>
+            </div>
+
+
+            <div class="panel">
+                <div class="panel-title">
+                    <h3>Linked wallets</h3>
+                    <span id="linkedCount">0 found</span>
+                </div>
+
+                <div id="linkedWallets" class="linked-wallets">
+                    <p>
+                        Wallet relationships will appear after analysis.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="panel transactions-panel">
+
+            <div class="panel-title">
+                <div>
+                    <h3>Recent transactions</h3>
+                    <p>Latest publicly available on-chain activity</p>
+                </div>
+
+                <button id="downloadBtn" class="secondary-btn">
+                    Download Report
+                </button>
+            </div>
+
+            <div class="table-wrap">
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>Transaction</th>
+                            <th>Time</th>
+                            <th>Value</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="transactionTable">
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+
+        <div class="disclaimer">
+            <strong>Important:</strong>
+            Blockchain indicators alone do not independently establish
+            fraud, criminal activity, ownership or intent.
+            Results should be treated as investigative signals requiring
+            further verification.
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer>
+    TraceChain:AI · Public Bitcoin blockchain analysis prototype
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
